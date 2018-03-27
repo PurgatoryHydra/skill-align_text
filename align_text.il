@@ -33,7 +33,9 @@ procedure( align_text( )
 			if( axlGetSelSet() != nil then
 				listObjects = cons(car(axlGetSelSet()), listObjects)
 			else
-				axlMsgPut( "We found nothing on your last pick. state: %d" state)
+				if(state != nil then
+					axlMsgPut( "We found nothing on your last pick. state: %d" state)
+				)
 			)
 		)
 		
@@ -43,7 +45,9 @@ procedure( align_text( )
 				textCenter = car(axlGetSelSet())
 				state = 2
 			else
-				axlMsgPut( "We found nothing on your last pick. state: %d" state)
+				if(state != nil then
+					axlMsgPut( "We found nothing on your last pick. state: %d" state)
+				)
 			)
 		)
 		
@@ -91,7 +95,9 @@ procedure( align_text( )
 	alignDirection = nil
 	textCenter = nil
 	listObjects = nil
-	axlFormClose(form)
+	if( form != nil then
+		axlFormClose(form)
+	)
 	axlCancelEnterFun()
 	axlClearSelSet()
 	axlCloseFindFilter()

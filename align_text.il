@@ -84,9 +84,9 @@ procedure( align_text( )
 
 (defun axlNext ()
 
+	state=1
 	axlCancelEnterFun()
 	axlClearSelSet()
-	state=1
 	
 )
 

@@ -83,11 +83,11 @@ procedure( align_text( )
 )
 
 (defun axlNext ()
-(prog ()
+
 	axlCancelEnterFun()
 	axlClearSelSet()
 	state=1
-)
+	
 )
 
 (defun axlDone ()
